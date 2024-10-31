@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/styles.css">
+    <title>Vazifani Tahrirlash</title>
+</head>
+<body>
+    <h1>Vazifani Tahrirlash</h1>
+    <form action="/task/<%= task.id %>/update" method="POST">
+        <label for="title">Sarlavha:</label>
+        <input type="text" name="title" id="title" value="<%= task.title %>" required>
+        <label for="description">Tavsif:</label>
+        <textarea name="description" id="description"><%= task.description %></textarea>
+        <label for="status">Holat:</label>
+        <select name="status" id="status">
+            <option value="pending" <%= task.status === "pending" ? "selected" : "" %>>Kutilmoqda</option>
+            <option value="completed" <%= task.status === "completed" ? "selected" : "" %>>Tugallangan</option>
+        </select>
+        <button type="submit">Yangilash</button>
+    </form>
+    <a href="/">Orqaga</a>
+</body>
+</html>

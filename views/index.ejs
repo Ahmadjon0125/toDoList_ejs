@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/styles.css">
+    <title>To-Do List</title>
+</head>
+<body>
+    <h1>Vazifalar Ro'yxati</h1>
+    <a class="newTask" href="/task/new">Yangi Vazifa</a>
+    <ul>
+        <% tasks.forEach(task => { %>
+            <li>
+                <strong><%= task.title %></strong> - <%= task.description %> - <%= task.status %>
+                <a href="/task/<%= task.id %>/edit">Tahrirlash</a>
+                <form action="/task/<%= task.id %>/delete?_method=DELETE" method="POST" style="display:inline;">
+                    <button type="submit">O'chirish</button>
+                </form>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>

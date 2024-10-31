@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    padding-left: 50px;
+}
+
+h1 {
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+}
+
+button {
+    margin-left: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 5px;
+    margin-left: 5px;
+    display: block;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.newTask {
+    display: block;
+    margin-left: 40%;
+    text-decoration: none;
+}
